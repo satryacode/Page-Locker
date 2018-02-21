@@ -75,21 +75,23 @@ document.body.onload = function() {
         // do something
         blurPage();
 
-        window.setTimeout(function() {
-            var password = prompt("Your PIN? \n(default pin is '1234')", "");
+        setTimeout(function() {
+            window.setTimeout(function() {
+                var password = prompt("Your PIN? \n(default pin is '1234')", "");
 
-            if (password == null || password == "") {
-                goInactive();
-            } else {
-                if (password == pin) {
-                    unblurPage();
-                    goActive();
-                } else {
-                    alert("Oops, PIN is incorrect.");
+                if (password == null || password == "") {
                     goInactive();
+                } else {
+                    if (password == pin) {
+                        unblurPage();
+                        goActive();
+                    } else {
+                        alert("Oops, PIN is incorrect.");
+                        goInactive();
+                    }
                 }
-            }
-        }, 1);
+            }, 1);
+        }, 500);
     }
 
     function goActive() {
