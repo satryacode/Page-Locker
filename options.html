@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head><title>Page Locker Options</title></head>
+<body style="font-size: 16px">
+<h2># Change PIN</h2>
+<label>
+	Input new pin:
+	<input type="text" id="newPin" />
+</label>
+<button id="savePin">Save Pin</button>
+
+<hr/>
+
+<h2># Set URL Rules</h2>
+<p>
+	Example: <br/>
+	"*"" (to apply for all URL, without double quotes) <br/>
+	"www.google.com" (to apply for single URL, without double quotes) <br/>
+	"www.google.com,www.facebook.com,web.whatsapp.com" (to apply for multiple URL, without double quotes)
+</p>
+<textarea id="urls" style="width: 600px;height: 100px;font-size: 16px"></textarea>
+<br/>
+<button id="saveUrl">Save URLs</button>
+
+<hr/>
+
+<h2># Change Timeout Delay</h2>
+<label>
+	Input timeout delay (in milisecond):
+	<input type="text" id="timeout" />
+</label>
+<button id="saveTimeout">Save Timeout</button>
+
+<div style="display: block;position: fixed; bottom: 10px; left: 10px">
+	&copy; 2018 Copyright <a href="https://www.satrya.id">Satryacode</a>
+</div>
+
+<script src="options.js"></script>
+</body>
+</html>
