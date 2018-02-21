@@ -84,7 +84,9 @@ document.body.onload = function() {
                 } else {
                     if (password == pin) {
                         unblurPage();
-                        goActive();
+                        setTimeout(function() {
+                            goActive();
+                        }, 500);
                     } else {
                         alert("Oops, PIN is incorrect.");
                         goInactive();
